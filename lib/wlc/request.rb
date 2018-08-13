@@ -13,7 +13,7 @@ module Wlc
     end
 
     def get(url, params = {})
-      Response.new connection.get(request_path(url), params.to_camel_keys)
+      Response.new connection.get(request_path(url), params)
     end
 
     def post(url, resource = {})
@@ -23,7 +23,7 @@ module Wlc
     private
 
     def resource_to_post(resource)
-      URI.encode_www_form(serialize_resource_keys(resource))
+      serialize_resource_keys(resource).to_json
     end
 
     def serialize_resource_keys(hash)

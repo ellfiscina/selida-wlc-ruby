@@ -7,7 +7,7 @@ module Wlc
     end
 
     def header
-      "Bearer #{client.current_token.access_token}"
+      "bearer #{client.token.access_token}"
     end
   end
 end

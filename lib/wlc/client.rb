@@ -25,10 +25,6 @@ module Wlc
       request.post path, resource.merge(keyword_token)
     end
 
-    def current_token
-      @token.expired? ? new_token : token
-    end
-
     private
 
     def request
@@ -36,7 +32,7 @@ module Wlc
     end
 
     def keyword_token
-      @keyword_token ||= { token: Token.access_keyword }
+      @keyword_token ||= { keyword: token.access_keyword }
     end
 
     def new_token

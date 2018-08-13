@@ -9,7 +9,8 @@ module Wlc
       end
 
       def find(codigo)
-        client.get(ENDPOINTS[:find], { codigo: codigo })
+        response = client.get(ENDPOINTS[:find], { Codigo: codigo })
+        response['success'] ? response['obj_return'] : response
       end
     end
   end

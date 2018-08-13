@@ -10,25 +10,17 @@ module Wlc
       "#<#{self.class.name}:#{object_id}>"
     end
 
-    def expires_at
-      Time.parse(valid_token['.expires'])
-    end
-
     def access_token
-      valid_token['Token']
+      valid_token['obj_return'][:token]
     end
 
     def access_keyword
-      valid_token['Keyword']
+      valid_token['obj_return'][:keyword]
     end
 
     def refresh
       self.valid_token = generate_new_token
       self
-    end
-
-    def expired?
-      (Time.now.utc - expires_at) >= 0
     end
 
     private
@@ -46,7 +38,7 @@ module Wlc
       connection = Faraday.new(url: token_host)
       response = connection.post do |request|
         request.headers['Content-Type'] = 'application/json'
-        request.body = URI.encode_www_form(token_grants)
+        request.body = token_grants.to_json
       end
       Response.new(response)
     end
