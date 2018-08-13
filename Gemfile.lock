@@ -1,0 +1,32 @@
+PATH
+  remote: .
+  specs:
+    wlc-sdk-ruby (0.1.1)
+      awrence
+      faraday
+      json
+      plissken
+      recursive-open-struct
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awrence (1.0.0)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
+    json (2.1.0)
+    multipart-post (2.0.0)
+    plissken (1.2.0)
+    rake (10.5.0)
+    recursive-open-struct (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  rake (~> 10.0)
+  wlc-sdk-ruby!
+
+BUNDLED WITH
+   1.16.2
