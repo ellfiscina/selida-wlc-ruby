@@ -7,14 +7,7 @@ module Wlc
     end
 
     def self.host
-      case Wlc.configuration.environment
-      when :sandbox
-        'http://www.selida.com.br'
-      when :production
-        'http://www.selida.com.br'
-      else
-        raise StandardError, 'invalid environment provided'
-      end
+      'http://www.selida.com.br'
     end
 
     def get(path, params = {})
