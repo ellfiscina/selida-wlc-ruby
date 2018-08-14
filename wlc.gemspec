@@ -5,8 +5,8 @@ require 'wlc/version'
 Gem::Specification.new do |spec|
   spec.name          = 'wlc-sdk-ruby'
   spec.version       = Wlc::VERSION
-  spec.authors       = ['Leonardo Santos']
-  spec.email         = ['aleotory@gmail.com']
+  spec.authors       = ['Leonardo Santos', 'Ellen Fiscina']
+  spec.email         = ['aleotory@gmail.com', 'ellfiscina@gmail.com']
 
   spec.description   = ''
   spec.summary       = ''
