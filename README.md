@@ -1,7 +1,7 @@
 # WLC Ruby SDK
 > Gem para integrar com a API WLC da selida.com.br
 
-[![Gem Version](https://badge.fury.io/rb/wlc-sdk-ruby.svg)](https://badge.fury.io/rb/wlc-sdk-ruby)
+[![Gem Version](https://badge.fury.io/rb/selida-wlc-ruby.svg)](https://badge.fury.io/rb/selida-wlc-ruby)
 
 **Índice**
 
@@ -20,7 +20,7 @@
 ## Instalação
 Adicione a seguinte linha no seu Gemfile:
 ```ruby
-gem 'wlc-sdk-ruby', require: 'wlc'
+gem 'selida-wlc-ruby', require: 'wlc'
 ```
 Depois, rode o `bundle install`.
 

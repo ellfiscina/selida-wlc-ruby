@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wlc-sdk-ruby (0.1.0)
+    selida-wlc-ruby (0.1.0)
       awrence
       faraday
       json
@@ -26,7 +26,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   rake (~> 10.0)
-  wlc-sdk-ruby!
+  selida-wlc-ruby!
 
 BUNDLED WITH
    1.16.2

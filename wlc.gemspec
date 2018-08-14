@@ -3,14 +3,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'wlc/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'wlc-sdk-ruby'
+  spec.name          = 'selida-wlc-ruby'
   spec.version       = Wlc::VERSION
   spec.authors       = ['Ellen Fiscina', 'Leonardo Santos']
   spec.email         = ['ellfiscina@gmail.com', 'aleotory@gmail.com']
 
   spec.description   = 'Gem to wrap selida.com.br API WLC'
   spec.summary       = ''
-  spec.homepage      = 'https://github.com/ellfiscina/wlc-sdk-ruby'
+  spec.homepage      = 'https://github.com/ellfiscina/selida-wlc-ruby'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.
