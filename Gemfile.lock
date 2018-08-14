@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wlc-sdk-ruby (0.1.1)
+    wlc-sdk-ruby (0.1.0)
       awrence
       faraday
       json

@@ -1,7 +1,7 @@
 # WLC Ruby SDK
 > Gem para integrar com a API WLC da selida.com.br
 
-<!-- [![Gem Version](https://badge.fury.io/rb/incentivale-sdk-ruby.svg)](https://badge.fury.io/rb/incentivale-sdk-ruby) -->
+[![Gem Version](https://badge.fury.io/rb/wlc-sdk-ruby.svg)](https://badge.fury.io/rb/wlc-sdk-ruby)
 
 **Índice**
 

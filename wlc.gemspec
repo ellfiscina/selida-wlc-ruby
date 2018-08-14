@@ -5,12 +5,12 @@ require 'wlc/version'
 Gem::Specification.new do |spec|
   spec.name          = 'wlc-sdk-ruby'
   spec.version       = Wlc::VERSION
-  spec.authors       = ['Leonardo Santos', 'Ellen Fiscina']
-  spec.email         = ['aleotory@gmail.com', 'ellfiscina@gmail.com']
+  spec.authors       = ['Ellen Fiscina', 'Leonardo Santos']
+  spec.email         = ['ellfiscina@gmail.com', 'aleotory@gmail.com']
 
-  spec.description   = ''
+  spec.description   = 'Gem to wrap selida.com.br API WLC'
   spec.summary       = ''
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/ellfiscina/wlc-sdk-ruby'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.
