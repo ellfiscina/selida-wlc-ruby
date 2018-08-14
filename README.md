@@ -30,7 +30,6 @@ Crie o arquivo `wlc.rb` no caminho 'config/initializers' com os dados para auten
 Wlc.configure do |config|
   config.username = 'usuario@email.com' # Substitua pelo seu username de login
   config.password = 'senhaXXX' # Substitua pelo sua senha de login
-  config.environment = :sandbox # Substitua pelo ambiente desejado (:sandbox / :production)
 end
 ```
 
