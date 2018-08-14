@@ -16,8 +16,8 @@ module Wlc
       end
 
       def available?(codigo)
-        resp = client.get(ENDPOINTS[:availability], { codigo: codigo })
-        resp['obj_return'][:disponivel]
+        response = client.get(ENDPOINTS[:availability], { Codigo: codigo })
+        response['obj_return'][:disponivel]
       end
     end
   end
