@@ -10,6 +10,9 @@
 - [Exemplos de Uso](#produtos):
   - [Produtos](#produtos)
     - [Listagem](#listagem)
+    - [Consulta](#consulta)
+    - [Disponibilidade](#disponibilidade)
+    - [Categorias](#categorias)
   - [Resgates](#resgates)
     - [Criação](#criação)
     - [Consulta](#consulta)
@@ -52,6 +55,12 @@ Serviço responsável por identificar a disponibilidade de um produto.
 ```ruby
 codigo = 138
 availability = Wlc.products.available?(codigo)
+```
+
+### Categorias
+Serviço responsável por listar as categorias de produtos
+```ruby
+categories = Wlc.products.categories
 ```
 
 ## Resgates
