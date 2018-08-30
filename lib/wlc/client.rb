@@ -15,7 +15,7 @@ module Wlc
     end
 
     def post(path, resource = {})
-      request.post path, resource.merge(keyword_token)
+      request.post request_path(path, keyword_token[:keyword]), resource
     end
 
     private
@@ -30,6 +30,10 @@ module Wlc
 
     def new_token
       self.token = token.refresh
+    end
+
+    def request_path(path, keyword)
+      path + "?Keyword=#{keyword}"
     end
   end
 end

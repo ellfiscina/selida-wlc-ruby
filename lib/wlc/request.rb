@@ -27,7 +27,7 @@ module Wlc
     end
 
     def serialize_resource_keys(hash)
-      hash.to_snake_keys.to_camel_keys.map { |k, v| [k.to_s,v] }
+      hash.to_snake_keys.to_camel_keys
     end
 
     def request_path(url)
