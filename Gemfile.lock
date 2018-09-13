@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    selida-wlc-ruby (0.1.6)
+    selida-wlc-ruby (0.1.7)
       awrence
       faraday
       json
