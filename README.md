@@ -13,6 +13,7 @@
     - [Consulta](#consulta)
     - [Disponibilidade](#disponibilidade)
     - [Categorias](#categorias)
+    - [Entrega](#entrega)
   - [Resgates](#resgates)
     - [Criação](#criação)
     - [Consulta](#consulta)
@@ -61,6 +62,14 @@ availability = Wlc.products.available?(codigo)
 Serviço responsável por listar as categorias de produtos
 ```ruby
 categories = Wlc.products.categories
+```
+
+### Entrega
+Serviço responsável por estimar o frete e prazo de entrega
+```ruby
+codigo = 138
+cep = 12345678
+delivery = Wlc.products.delivery(codigo, cep)
 ```
 
 ## Resgates
