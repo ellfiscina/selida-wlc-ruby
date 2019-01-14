@@ -1,5 +1,6 @@
 module Wlc
   class Token
+    MINUTES = 10
     attr_accessor :valid_token
 
     def initialize
@@ -23,6 +24,10 @@ module Wlc
       self
     end
 
+    def expired?
+      (Time.now.utc - @expires_at) >= 0
+    end
+
     private
 
     def token_host
@@ -35,6 +40,7 @@ module Wlc
     end
 
     def generate_new_token
+      @expires_at = Time.now + (MINUTES * 60)
       connection = Faraday.new(url: token_host)
       response = connection.post do |request|
         request.headers['Content-Type'] = 'application/json'

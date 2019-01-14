@@ -18,6 +18,10 @@ module Wlc
       request.post request_path(path, keyword_token[:keyword]), resource
     end
 
+    def current_token
+      @token.expired? ? new_token : token
+    end
+
     private
 
     def request
