@@ -4,7 +4,8 @@ module Wlc
       ENDPOINTS = { index: '/Produtos/Produto/ConsultaProdutos',
                     find: '/Produtos/Produto/ConsultaProduto',
                     availability: '/Produtos/Produto/ConsultaDisponibilidadeProduto',
-                    category: '/Produtos/Produto/ConsultaCategorias' }
+                    category: '/Produtos/Produto/ConsultaCategorias',
+                    delivery: '/Produtos/Produto/ConsultaPrazoEntrega'}
 
       def all
         response = client.get(ENDPOINTS[:index])
@@ -23,6 +24,11 @@ module Wlc
 
       def categories
         response = client.get(ENDPOINTS[:category])
+        response['success'] ? response['obj_return'] : response
+      end
+
+      def delivery(codigo, cep)
+        response = client.get(ENDPOINTS[:delivery], { Codigo: codigo, CEP: cep })
         response['success'] ? response['obj_return'] : response
       end
     end
