@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    selida-wlc-ruby (0.2)
+    selida-wlc-ruby (0.2.1)
       awrence
       faraday
       json
@@ -12,7 +12,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     awrence (1.0.0)
-    faraday (0.15.2)
+    faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     json (2.1.0)
     multipart-post (2.0.0)
