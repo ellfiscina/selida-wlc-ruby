@@ -9,7 +9,7 @@ module Wlc
         builder.headers['Content-Type'] = 'application/json'
         builder.headers['Authorization'] = Auth.new(client).header
         builder.adapter Faraday.default_adapter
-        builder.options[:timeout] = Wlc.configuration.timeout
+        builder.options[:timeout] = timeout_option
       end
     end
 
@@ -26,6 +26,11 @@ module Wlc
     end
 
     private
+
+    def timeout_option
+      timeout = Wlc.configuration.timeout
+      timeout.to_i unless timeout.nil?
+    end
 
     def watch_timeout(url)
       start_time = Time.now.to_f
