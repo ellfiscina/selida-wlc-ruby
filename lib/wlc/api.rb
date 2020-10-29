@@ -13,5 +13,9 @@ module Wlc
     def order
       Wlc::Resources::Order.new(client)
     end
+
+    def available?
+      client.token.valid?
+    end
   end
 end

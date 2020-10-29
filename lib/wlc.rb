@@ -35,6 +35,6 @@ module Wlc
       @api = Api.new(Client.new(token))
     end
 
-    def_delegators :@api, :products, :order
+    def_delegators :@api, :products, :order, :available?
   end
 end
