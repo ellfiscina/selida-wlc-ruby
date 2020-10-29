@@ -28,6 +28,11 @@ module Wlc
       (Time.now.utc - @expires_at) >= 0
     end
 
+    def valid?
+      success = valid_token.success if valid_token.respond_to?(:success)
+      success == true
+    end
+
     private
 
     def token_host
@@ -45,8 +50,10 @@ module Wlc
       response = connection.post do |request|
         request.headers['Content-Type'] = 'application/json'
         request.body = token_grants.to_json
+        request.options[:timeout] = 3
       end
       Response.new(response)
+    rescue Faraday::Error
     end
   end
 end
